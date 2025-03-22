@@ -13,7 +13,7 @@ ENV UV_HTTP_TIMEOUT=120000
 RUN pip install --upgrade pip && pip install uv
 
 # Cria o ambiente virtual e sincroniza as dependências conforme o pyproject.toml
-RUN uv lock && uv venv .venv && uv sync
+# RUN uv lock && uv venv .venv && uv sync
 
 # Copia o código da aplicação para dentro do container
 COPY . .
