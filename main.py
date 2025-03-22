@@ -69,7 +69,6 @@ question = st.text_input("Faça uma pergunta sobre o site.", "Quais as notícias
 
 if st.button("Responder"):
     if url and question:
-        delete_db_folder()  
 
         with st.spinner("Processando..."):
             result = run_crew(url, question)
