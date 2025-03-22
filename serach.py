@@ -5,8 +5,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def run_crew(url, question):
+    
+    config = {
+        "llm": {
+        "provider": "huggingface",
+        "config": {
+            "model": "gemini-1.5-flash",
+        }
+    }
+    }
 
-    rag_tool = RagTool()
+    rag_tool = RagTool(config=config)
 
     rag_tool.add(data_type="web_page", source=url)
 
