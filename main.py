@@ -1,13 +1,16 @@
 import streamlit as st
 from crewai import Crew, Agent, Task
-from crewai_tools import RagTool
+from crewai_tools import RagTool, WebsiteSearchTool
 from dotenv import load_dotenv
 
 load_dotenv()
 
 def run_crew(url, question):
-    rag_tool = RagTool()
-    rag_tool.add(data_type="web_page", source=url)
+    # rag_tool = RagTool()
+    # rag_tool.add(data_type="web_page", source=url)
+
+    rag_tool = WebsiteSearchTool(website=url)
+
 
     especialista = Agent(
         role="Analista de Pesquisa",
