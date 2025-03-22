@@ -1,14 +1,14 @@
 from crewai import Task
-from agentes import knowledge_expert
-from crewai.project import CrewBase, agent, crew, task
+from agentes import especialista
 
-
-reserach_task = Task(
-        description="""
-            Use the document to response the quesiton: {question}.
-        """,
-        expected_output="""
-          A response of the {question}
-        """,
-        agent=knowledge_expert
-    )
+research_task = Task(
+    description="""
+        Use the rag_tool to serach necessary document to reponse the {question}. 
+        Resonse the question in a especislit way
+    """,
+    expected_output="""
+        A good aswer for the question. 
+    """,
+    agent=especialista,
+    verbose=True
+)
