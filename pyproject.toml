@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "crewai-tools>=0.38.1",
+    "google-generativeai>=0.8.4",
     "psutil>=7.0.0",
     "streamlit>=1.43.2",
 ]

@@ -8,7 +8,7 @@ def run_crew(url, question):
     
     config = {
         "llm": {
-        "provider": "huggingface",
+        "provider": "google",
         "config": {
             "model": "gemini-1.5-flash",
         }
