@@ -4,8 +4,8 @@ from serach import run_crew
 
 st.title("Web RAG")
 
-url = st.text_input("Digite a url que deseja extrair informações?", "https://www.uol.com.br/")
-question = st.text_input("Faça uma pergunta sobre o site.", "Quis as princiapis notícias")
+url = st.text_input("Digite a url que deseja extrair informações?", "https://pt.wikipedia.org/wiki/Melancia")
+question = st.text_input("Faça uma pergunta sobre o site.", "O que você sabe sobre Melancias?")
 
 
 
